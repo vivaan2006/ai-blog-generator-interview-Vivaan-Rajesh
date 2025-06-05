@@ -1,0 +1,1 @@
+# returns search_volume, keyword_difficulty, and avg_cpc for any given keyword (mock or real).
