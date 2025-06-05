@@ -9,8 +9,9 @@ keyword (e.g., "wireless earbuds"), storing the result in a local file or printi
 from flask import Flask, request, jsonify
 from ai_generator import generate_blog_post
 from seo_fetcher import fetch_seo_data
+from scheduler import start_scheduler
 app =  Flask(__name__)
-
+start_scheduler()
 
 @app.route("/generate")
 def generate():
