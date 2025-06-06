@@ -2,7 +2,7 @@
 # I chose real but use pytrends because it is the only reliable free API, everything else is subscription based
 from pytrends.request import TrendReq
 
-def get_seo_data(keyword):
+def fetch_seo_data(keyword):
     pytrends = TrendReq(hl='en-US', tz=360)
     pytrends.build_payload([keyword], cat=0, timeframe='today 12-m', geo='', gprop='')
 
