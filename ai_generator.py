@@ -2,12 +2,10 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# Load .env and initialize OpenAI client
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def replace_affiliate_links(content):
-    # Replace the single‐brace placeholders {AFF_LINK_n} with real URLs
     for i in range(1, 6):
         content = content.replace(f"{{AFF_LINK_{i}}}", f"https://example.com/product{i}")
     return content
@@ -45,7 +43,6 @@ Format everything in clean Markdown—include headings (`##`), bullet points, bo
             temperature=0.7,
         )
 
-        # The model’s response is raw Markdown (no triple‐backticks)
         raw_content = response.choices[0].message.content.strip()
         final_content = replace_affiliate_links(raw_content)
         return final_content

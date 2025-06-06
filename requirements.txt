@@ -1,4 +1,6 @@
 Flask
 openai
 python-dotenv
-APScheduler
+requests
+pytrends
+apscheduler

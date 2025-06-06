@@ -1,5 +1,7 @@
 venv/
 __pycache__/
+*.py[cod]
 *.pyc
 .env
+generated_posts/
 ./idea
